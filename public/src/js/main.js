@@ -1,13 +1,7 @@
 (function() {
     "use strict";
 
-    // $(document).ready(() => {
-
-
     const APP = function() {
-
-
-
 
         function init() {
             console.log('in');
@@ -17,11 +11,9 @@
             init: init
         };
 
-    }; //end APP
-
-    // }); //end docready
+    };
 
     const THING = APP();
     THING.init();
 
-})(); //end iife
+})();
