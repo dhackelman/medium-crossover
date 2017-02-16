@@ -1,0 +1,11 @@
+// System fonts
+@import url( 'https://fonts.googleapis.com/css?family=Roboto'); // Article body font
+@import url( 'https://fonts.googleapis.com/css?family=PT+Sans'); // Headers
+@import url( 'https://fonts.googleapis.com/css?family=Quicksand');
+$systemfonts: 'Roboto', sans-serif;
+$bodyfonts: 'PT Sans', sans-serif;
+$headers: 'Quicksand', sans-serif; // Colors
+$green: #00AB6C;
+$lightgrey: #e5e5e5;
+$medgrey: #7f7f7f;
+$darkgrey: #4c4c4c;
