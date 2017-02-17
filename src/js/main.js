@@ -51,9 +51,9 @@
         function buildTemplateWithData() {
           $.get("https://medium-crossover.herokuapp.com/posts").done(
             function (response) {
-            //   for (let i = 0; i < response.length; i++) {
-            //   new IndividualStories(response[i]);
-            // }
+              for (let i = 0; i < response.length; i++) {
+                new IndividualStories(response[i]);
+            }
             console.log(response);
 
           // const settings = {
