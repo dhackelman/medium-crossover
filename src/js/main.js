@@ -10,7 +10,7 @@
         }
 
         function bindEvents() {
-            -
+
         }
 
         function init() {
