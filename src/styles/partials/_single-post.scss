@@ -1,0 +1,81 @@
+.post-container {
+  background-color: white;
+  border: white;
+  line-height: 1;
+  padding: 1% 5% 0% 5%;
+  margin: 5% auto;
+  width: 470px;
+  height: 480px;
+}
+
+.post-author-info {
+  overflow: hidden;
+}
+
+.author-image-holder {
+  background: url(http://i.imgur.com/bWv7tvS.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  border-radius: 50%;
+  float: left;
+  height: 50px;
+  margin: 2%;
+  width: 50px;
+}
+
+.post-author-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 2% 10% 0;
+  text-transform: capitalize;
+  width: 90%;
+}
+
+.post-date, .post-length {
+  font-size: .8rem;
+  margin: 0 1%;
+}
+
+.post-content {
+  margin: 1% auto;
+  width: 100%;
+}
+
+.post-title{
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+.post-image {
+  max-width: 90%;
+}
+
+.read-more {
+  margin-bottom: 0;
+}
+
+.read-more a {
+  color: gray;
+  font-size: .8rem;
+  text-decoration: none;
+}
+
+.social-bar {
+  display: flex;
+  margin-top: 0;
+  height: 40px;
+  width: 100%;
+}
+
+.heart-favicon {
+  height: 20px;
+  margin: 2% auto 0 0;
+  width: 20px;
+}
+
+.bookmark-favicon {
+  height: 20px;
+  margin: 2% 2% 0 auto;
+  width: 20px;
+}
