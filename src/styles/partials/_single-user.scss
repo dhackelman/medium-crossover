@@ -1,0 +1,66 @@
+.stories-content-box {
+  width: 100%;
+}
+
+.user-container {
+  background-color: white;
+  border-bottom: 2px solid gray;
+  margin: 5% auto;
+  padding: 5% 5%;
+  width: 50%;
+}
+
+.user-full-name{
+  display: inline-block;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.user-description {
+
+}
+
+.author-image-holder {
+  background: url(http://i.imgur.com/bWv7tvS.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  border-radius: 100%;
+  float: right;
+  height: 120px;
+  margin: 2%;
+  width: 120px;
+}
+
+.following, .followers {
+  display: inline-block;
+  margin: 1% 1% 1% 2%;
+  color: gray;
+}
+
+
+.twitter {
+  display: inline-block;
+  margin: 1% 1% 1% 10%;
+}
+
+.twitter img {
+  max-height: 20px;
+}
+
+.facebook {
+  display: inline-block;
+  margin: 1% 1% 1% 1%;
+}
+
+.follow-button {
+  background-color: white;
+  color: #00AB6C;
+  border: 2px solid #00AB6C;
+  font-size: .8rem;
+  padding: 2% 4%;
+  border-radius: 500px;
+  margin: 2% 0 0;
+}

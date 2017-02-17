@@ -4,12 +4,11 @@
   line-height: 1;
   padding: 1% 5% 0% 5%;
   margin: 5% auto;
-  width: 470px;
+  width: 50%;
   height: 480px;
 }
 
 .post-author-info {
-  overflow: hidden;
 }
 
 .author-image-holder {
@@ -17,24 +16,27 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-  border-radius: 50%;
+  display: inline-block;
   float: left;
+  border-radius: 50%;
   height: 50px;
   margin: 2%;
+  vertical-align: middle;
   width: 50px;
 }
 
 .post-author-name {
   font-size: 1.25rem;
   font-weight: 700;
-  margin: 2% 10% 0;
+  margin: 1% 0 0 0;
   text-transform: capitalize;
-  width: 90%;
+  display: block;
 }
 
 .post-date, .post-length {
   font-size: .8rem;
   margin: 0 1%;
+  width: 10%;
 }
 
 .post-content {
