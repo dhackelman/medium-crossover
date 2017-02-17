@@ -165,7 +165,8 @@
                 <button class="follow-button user">Follow</button>
             </div>
         </script>
-        <script id="post-template" type="text/x-hanglebars-template">
+        <script id="post-template" type="text/x-handlebars-template">
+          {{#each post}}
             <div class="post-container">
                 <div class="post-author-info">
                     // inline style the background image with handlebars
@@ -186,6 +187,7 @@
                     <img class="bookmark-favicon" src="http://bit.ly/2kx7LAE">
                 </div>
             </div>
+            {{/each}}
         </script>
         <script src="src/js/vendor/jquery-3.1.1.min.js "></script>
         <script src="src/js/vendor/handlebars-v4.0.5.js "></script>
