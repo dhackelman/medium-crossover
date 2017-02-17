@@ -14,7 +14,7 @@
             this.date = storyData.date;
             this.postWordCount = storyData.postWordCount;
             this.id = storyData.id;
-            this.postTitle = storyData.postTitle;
+            this.postTitle = storyData.title;
             this.favorited = storyData.favorited;
             this.responded = storyData.responded;
             this.body = storyData.body;
