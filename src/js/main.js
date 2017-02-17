@@ -10,13 +10,11 @@
         class IndividualStories {
           constructor(storyData) {
             this.image = storyData.image;
-            this.fullName = storyData.fullName;
-            this.date = storyData.date;
+            this.fullName = storyData.user_id;
+            this.date = storyData.created_at;
             this.postWordCount = storyData.postWordCount;
             this.id = storyData.id;
             this.postTitle = storyData.title;
-            this.favorited = storyData.favorited;
-            this.responded = storyData.responded;
             this.body = storyData.body;
             //eventual link to body of article
             this.build();
@@ -32,9 +30,7 @@
               date: this.date,
               postWordCount: this.postWordCount,
               id: this.id,
-              postTitle: this.postTitle,
-              favorited: this.favorited,
-              responded: this.responded
+              postTitle: this.postTitle
               //eventually link to body of article
             };
             const html = template(context);
