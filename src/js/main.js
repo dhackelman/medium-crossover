@@ -74,8 +74,6 @@
           //     // }
           //     console.log(response);
           // });
-        }).catch((error), function() {
-          console.log('error');
         });
       }
 
