@@ -17,7 +17,7 @@
 
         <nav class="sign">
             <div class="logo-image">
-                <img src="" />
+                <img src="#" />
                 <p>
                     Medium
                 </p>
@@ -39,46 +39,120 @@
         </nav>
     </header>
 
+    <div class="main-content-body">
+        <section class="each-content-box">
+            <nav>
+                <img src="#" />
+                <a href="#">{{full-name}}</a>
+            </nav>
+            <div class="stories-content-box">
+
+            </div>
+        </section>
+        <!-- user and tags aside container -->
+        <aside class="side-content-bar">
+            <!-- this is a secondary wrap for ^ container  -->
+            <div class="aside-user-content">
+
+
+                <!-- Top stories -->
+                <div class="top-stories-content">
+                    <a href="#">Top Stories</a>
+                </div>
+                <!-- Container with top stories and their author  -->
+                <div class="user-top-stories-container">
+                    <!-- Individual user stories to be plugged in -->
+                    <div class="user-stories-container">
+
+                    </div>
+                </div>
+                <!-- Authors Picks -->
+                <div class="author-picks-content">
+                    <a href="#">Authors Picks</a>
+                </div>
+                <!-- Container with authors picks and their author  -->
+                <div class="author-picks-stories-container">
+                    <!-- Individual author picks to be plugged in -->
+                    <div class="authors-picks">
+
+                    </div>
+                </div>
+
+                <!-- One Tag -->
+                <div class="stories-tag-content">
+                    <a href="#">Authors Picks</a>
+                </div>
+                <!-- Containers with stories to do with category  -->
+                <div class="tag-stories-container">
+                    <!-- Individual stories with category -->
+                    <div class="tag-stories">
+
+                    </div>
+                </div>
+
+
+
+                <div class="write-story">
+                    <button class="author-write-story"><a href="#">Write A Story</a> </button>
+                </div>
+
+
+            </div>
+
+
+            <footer>
+                <a href="#">Home</a>
+                <a href="#">Status</a>
+                <a href="#">Blog</a>
+                <a href="#">Careers</a>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">About</a>
+            </footer>
+        </aside>
+    </div>
+
+
 
 
 
 
 
     <script id="user-template" type="text/x-hanglebars-template">
-      <div class="user-container">
-        <p class="user-full-name" data-id={{id}}>{{full-name}}</p>
-        <img class="user-image" src={{image}}>
-        <p class="user-dsecription">{{description}}</p>
-        <div class="social-bar">
-          <div class="folllowing">{{following}} Following</div>
-          <div class="followers">{{followers}} Followers</div>
-          <div class="twitter"><a href="#">{{twitter-link}}</a></div>
-          <div class="facebook"><a href="#">{{fb-link}}</a></div>
+        <div class="user-container">
+            <p class="user-full-name" data-id={{id}}>{{full-name}}</p>
+            <img class="user-image" src={{image}}>
+            <p class="user-dsecription">{{description}}</p>
+            <div class="social-bar">
+                <div class="folllowing">{{following}} Following</div>
+                <div class="followers">{{followers}} Followers</div>
+                <div class="twitter"><a href="#">{{twitter-link}}</a></div>
+                <div class="facebook"><a href="#">{{fb-link}}</a></div>
+            </div>
+            <button class="follow-button user">Follow</button>
         </div>
-        <button class="follow-button user">Follow</button>
-      </div>
     </script>
     <script id="user-template" type="text/x-hanglebars-template">
-      <div class="post-container">
-        <div class="post-author-info">
-          <img class="user-image post-author-image" src={{image}}>
-          <p class="user-full-name post-author-name" data-id={{id}}>{{full-name}}</p>
-          <p class="post-date">{{date}}</p>
-          <p class="post-length">{{postWordCount}}</p>
+        <div class="post-container">
+            <div class="post-author-info">
+                <img class="user-image post-author-image" src={{image}}>
+                <p class="user-full-name post-author-name" data-id={{id}}>{{full-name}}</p>
+                <p class="post-date">{{date}}</p>
+                <p class="post-length">{{postWordCount}}</p>
+            </div>
+            <div class="post-content">
+                <h1 class="post-title">{{postTitle}}</h1>
+                <img class="post-image" src={{image}}>
+                <p class="read-more"><a href={{bodyLink}}>Read More...</a></p>
+            </div>
+            <div class="social-bar post">
+                // heart favicon
+                <p>{{favorited}}</p>
+                <p>{{responded}} responded</p>
+                //bookmark favicon
+            </div>
+            <button class="follow-button user">Follow</button>
         </div>
-        <div class="post-content">
-          <h1 class="post-title">{{postTitle}}</h1>
-          <img class="post-image" src={{image}}>
-          <p class="read-more"><a href={{bodyLink}}>Read More...</a></p>
-        </div>
-        <div class="social-bar post">
-          // heart favicon
-          <p>{{favorited}}</p>
-          <p>{{responded}} responded</p>
-          //bookmark favicon
-        </div>
-        <button class="follow-button user">Follow</button>
-      </div>
     </script>
     <script src="src/js/vendor/jquery-3.1.1.min.js "></script>
     <script src="src/js/vendor/handlebars-v4.0.5.js "></script>
