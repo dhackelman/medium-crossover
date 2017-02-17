@@ -51,6 +51,7 @@
           const settings = {
               "async": true,
               "crossDomain": true,
+              "dataType": "jsonp",
               "url": `https://medium-crossover.herokuapp.com/posts`,
               "method": "GET",
               "headers": {
