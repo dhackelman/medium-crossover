@@ -24,7 +24,7 @@
 
 
           build() {
-            const source = $('#post-template');
+            const source = $('#post-template').html();
             const template = Handlebars.compile(source);
             const context = {
               image: this.image,
@@ -36,11 +36,13 @@
               favorited: this.favorited,
               responded: this.responded
               //eventually link to body of article
-            }
+            },
+            const html = template(context);
             $('post-container').prepend(html);
           }
 
         }
+
         function bindEvents() {
           buildTemplateWithData();
           writeStoryButton();
