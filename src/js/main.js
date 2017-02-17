@@ -38,7 +38,7 @@
               //eventually link to body of article
             };
             const html = template(context);
-            $('post-container').prepend(html);
+            $('.stories-content-box').prepend(html);
           }
 
         }
