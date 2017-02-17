@@ -9,14 +9,14 @@
 
         class IndividualStories {
           constructor(storyData) {
-            this.image: storyData.image,
-            this.fullName: storyData.fullName,
-            this.date: storyData.date,
-            this.postWordCount: storyData.postWordCount,
-            this.id: storyData.id,
-            this.postTitle: storyData.postTitle,
-            this.favorited: storyData.favorited,
-            this.responded: storyData.responded,
+            this.image = storyData.image;
+            this.fullName = storyData.fullName;
+            this.date = storyData.date;
+            this.postWordCount: storyData.postWordCount;
+            this.id = storyData.id;
+            this.postTitle = storyData.postTitle;
+            this.favorited = storyData.favorited;
+            this.responded = storyData.responded;
             //eventual link to body of article
             this.build();
           }
