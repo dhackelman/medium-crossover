@@ -74,7 +74,7 @@
           //     // }
           //     console.log(response);
           // });
-        }).catch((error) function() {
+        }).catch((error), function() {
           console.log('error');
         });
       }
