@@ -3,6 +3,16 @@
 
     const APP = function() {
 
+
+
+        function buildTemplate() {
+
+        }
+
+        function bindEvents() {
+            -
+        }
+
         function init() {
             console.log('in');
         }
