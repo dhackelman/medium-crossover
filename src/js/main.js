@@ -17,6 +17,7 @@
             this.postTitle = storyData.postTitle;
             this.favorited = storyData.favorited;
             this.responded = storyData.responded;
+            this.body = storyData.body;
             //eventual link to body of article
             this.build();
           }
@@ -49,8 +50,10 @@
 
         function buildTemplateWithData() {
           $.get("https://medium-crossover.herokuapp.com/posts").done(
-            function (data) {
-              console.log(data);
+            function (response) {
+              for (let i = 0; i < response.length; i++) {
+              new IndividualStories(response[i]);
+            }
 
           // const settings = {
           //     "async": true,
