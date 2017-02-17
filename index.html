@@ -42,39 +42,7 @@
     <div class="main-content-body">
         <section class="each-content-box">
             <div class="stories-content-box">
-                <div class="user-container">
-                    <p class="user-full-name" data-id={{id}}>this dude has a name</p>
-                    <div class="author-image-holder"></div>
-                    <p class="user-dsecription">Velit donec erat nec velit pede leo, ut nibh sed euismod dolor mattis, nunc pede at in dolor viverra risus.</p>
-                    <div class="social-bar">
-                        <div class="following">543 Following</div>
-                        <div class="followers">27 Followers</div>
-                        <div class="twitter">
-                            <a href="#"><img src="http://bit.ly/KBtFfu"></a>
-                        </div>
-                        <div class="facebook">
-                            <a href="#"><img src="http://bit.ly/2lrcGD3"></a>
-                        </div>
-                    </div>
-                    <button class="follow-button user">Follow</button>
-                </div>
-                <div class="post-container">
-                    <div class="post-author-info">
-                        <div class="author-image-holder"></div>
-                        <p class="user-full-name post-author-name" data-id=123>this dude has a Name</p>
-                        <span class="post-date">Feb 17, 2017</span>
-                        <span class="post-length">245 Words</span>
-                    </div>
-                    <div class="post-content">
-                        <img class="post-image" src="http://bit.ly/2kwVI6y">
-                        <h1 class="post-title">This Dude's Post</h1>
-                        <p class="read-more"><a href="#">Read More...</a></p>
-                    </div>
-                    <div class="social-bar post">
-                        <img class="heart-favicon" src="http://bit.ly/2lr1FRv">
-                        <img class="bookmark-favicon" src="http://bit.ly/2kx7LAE">
-                    </div>
-                </div>
+
             </div>
         </section>
         <!-- user and tags aside container -->
@@ -166,7 +134,7 @@
             </div>
         </script>
         <script id="post-template" type="text/x-handlebars-template">
-          <p>{{title}}</p>
+          <p>{{postTitle}}</p>
           <!-- {{#each post}}
             <div class="post-container">
                 <div class="post-author-info">
