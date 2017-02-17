@@ -6,14 +6,19 @@
 }
 
 .logo-image {
-    align-items: baseline;
+    align-items: center;
     display: flex;
     flex-direction: row;
     color: #4c4c4c;
+
+    img {
+      display: inline-block;
+      vertical-align: middle;
+    }
 }
 
 .user-start {
-    align-items: baseline;
+    align-items: center;
     color: #00AB6C;
     display: flex;
     flex-direction: row;
@@ -26,10 +31,12 @@
 }
 
 .categories-menu {
+    align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     list-style: none;
+    padding: 2% 0;
 
     a {
         color: #7f7f7f;

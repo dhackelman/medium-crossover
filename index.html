@@ -17,16 +17,16 @@
 
         <nav class="sign">
             <div class="logo-image">
-                <img src="#" />
+                <img src="src/styles/images/medium-logos-master/logo/medium-m-color-100px.png">
                 <p>
                     Medium
                 </p>
             </div>
             <div class="user-start">
-                <p>
+                <button class="author-write-story header">
                     Write a story
-                </p>
-                <a href="#">Sign in/ Sign up</a>
+                </button>
+                <a class="sign-in-link" href="#">Sign in/ Sign up</a>
             </div>
         </nav>
         <nav class="categories">
@@ -41,10 +41,6 @@
 
     <div class="main-content-body">
         <section class="each-content-box">
-            <nav>
-                <img src="#" />
-                <a href="#">{{full-name}}</a>
-            </nav>
             <div class="stories-content-box">
                 <div class="user-container">
                     <p class="user-full-name" data-id={{id}}>this dude has a name</p>
@@ -82,7 +78,7 @@
             </div>
         </section>
         <!-- user and tags aside container -->
-        <aside class="side-content-bar">
+        <div class="side-content-bar">
             <!-- this is a secondary wrap for ^ container  -->
             <div class="aside-user-content">
 
@@ -145,7 +141,9 @@
                 <a href="#">Terms</a>
                 <a href="#">About</a>
             </footer>
-        </aside>
+        </div>
+
+      </div>
 
 
 
@@ -170,6 +168,7 @@
         <script id="post-template" type="text/x-hanglebars-template">
             <div class="post-container">
                 <div class="post-author-info">
+                    // inline style the background image with handlebars
                     <div class="author-image-holder"></div>
                     <p class="user-full-name post-author-name" data-id={{id}}>{{full-name}}</p>
                     <span class="post-date">{{date}}</span>
