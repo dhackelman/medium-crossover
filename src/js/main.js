@@ -68,7 +68,8 @@
           //     // }
           //     console.log(response);
           // });
-        }
+        });
+      }
 
         function clickCategories() {
           categoriesButtons.on('click', 'li', function() {
