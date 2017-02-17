@@ -46,35 +46,39 @@
                 <a href="#">{{full-name}}</a>
             </nav>
             <div class="stories-content-box">
-              <div class="user-container">
-                <p class="user-full-name" data-id={{id}}>this dude has a name</p>
-                <div class="author-image-holder"></div>
-                <p class="user-dsecription">Velit donec erat nec velit pede leo, ut nibh sed euismod dolor mattis, nunc pede at in dolor viverra risus.</p>
-                <div class="social-bar">
-                  <div class="following">543 Following</div>
-                  <div class="followers">27 Followers</div>
-                  <div class="twitter"><a href="#"><img src="http://bit.ly/KBtFfu"></a></div>
-                  <div class="facebook"><a href="#"><img src="http://bit.ly/2lrcGD3"></a></div>
+                <div class="user-container">
+                    <p class="user-full-name" data-id={{id}}>this dude has a name</p>
+                    <div class="author-image-holder"></div>
+                    <p class="user-dsecription">Velit donec erat nec velit pede leo, ut nibh sed euismod dolor mattis, nunc pede at in dolor viverra risus.</p>
+                    <div class="social-bar">
+                        <div class="following">543 Following</div>
+                        <div class="followers">27 Followers</div>
+                        <div class="twitter">
+                            <a href="#"><img src="http://bit.ly/KBtFfu"></a>
+                        </div>
+                        <div class="facebook">
+                            <a href="#"><img src="http://bit.ly/2lrcGD3"></a>
+                        </div>
+                    </div>
+                    <button class="follow-button user">Follow</button>
                 </div>
-                <button class="follow-button user">Follow</button>
-              </div>
-              <div class="post-container">
-                <div class="post-author-info">
-                  <div class="author-image-holder"></div>
-                  <p class="user-full-name post-author-name" data-id=123>this dude has a Name</p>
-                  <span class="post-date">Feb 17, 2017</span>
-                  <span class="post-length">245 Words</span>
+                <div class="post-container">
+                    <div class="post-author-info">
+                        <div class="author-image-holder"></div>
+                        <p class="user-full-name post-author-name" data-id=123>this dude has a Name</p>
+                        <span class="post-date">Feb 17, 2017</span>
+                        <span class="post-length">245 Words</span>
+                    </div>
+                    <div class="post-content">
+                        <img class="post-image" src="http://bit.ly/2kwVI6y">
+                        <h1 class="post-title">This Dude's Post</h1>
+                        <p class="read-more"><a href="#">Read More...</a></p>
+                    </div>
+                    <div class="social-bar post">
+                        <img class="heart-favicon" src="http://bit.ly/2lr1FRv">
+                        <img class="bookmark-favicon" src="http://bit.ly/2kx7LAE">
+                    </div>
                 </div>
-                <div class="post-content">
-                  <img class="post-image" src="http://bit.ly/2kwVI6y">
-                  <h1 class="post-title">This Dude's Post</h1>
-                  <p class="read-more"><a href="#">Read More...</a></p>
-                </div>
-                <div class="social-bar post">
-                  <img class="heart-favicon" src="http://bit.ly/2lr1FRv">
-                  <img class="bookmark-favicon" src="http://bit.ly/2kx7LAE">
-                </div>
-              </div>
             </div>
         </section>
         <!-- user and tags aside container -->
@@ -91,7 +95,9 @@
                 <div class="user-top-stories-container">
                     <!-- Individual user stories to be plugged in -->
                     <div class="user-stories-container">
-
+                        <img src "">
+                        <p> DUUUUUUUUUDE
+                        </p>
                     </div>
                 </div>
                 <!-- Authors Picks -->
@@ -102,19 +108,21 @@
                 <div class="author-picks-stories-container">
                     <!-- Individual author picks to be plugged in -->
                     <div class="authors-picks">
-
+                        <img src "">
+                        <p>BROOOOOOOO</p>
                     </div>
                 </div>
 
                 <!-- One Tag -->
                 <div class="stories-tag-content">
-                    <a href="#">Authors Picks</a>
+                    <a href="#">Tags</a>
                 </div>
                 <!-- Containers with stories to do with category  -->
                 <div class="tag-stories-container">
                     <!-- Individual stories with category -->
                     <div class="tag-stories">
-
+                        <img src "">
+                        <p>SUUUUUUUUUUUUH</p>
                     </div>
                 </div>
 
@@ -128,7 +136,7 @@
             </div>
 
 
-            <footer>
+            <footer class="front-page-footer">
                 <a href="#">Home</a>
                 <a href="#">Status</a>
                 <a href="#">Blog</a>
@@ -138,7 +146,6 @@
                 <a href="#">About</a>
             </footer>
         </aside>
-    </div>
 
 
 
@@ -146,44 +153,44 @@
 
 
 
-    <script id="user-template" type="text/x-hanglebars-template">
-        <div class="user-container">
-            <p class="user-full-name" data-id={{id}}>{{full-name}}</p>
-            <img class="user-image" src={{image}}>
-            <p class="user-dsecription">{{description}}</p>
-            <div class="social-bar">
-                <div class="folllowing">{{following}} Following</div>
-                <div class="followers">{{followers}} Followers</div>
-                <div class="twitter"><a href="#">{{twitter-link}}</a></div>
-                <div class="facebook"><a href="#">{{fb-link}}</a></div>
+        <script id="user-template" type="text/x-hanglebars-template">
+            <div class="user-container">
+                <p class="user-full-name" data-id={{id}}>{{full-name}}</p>
+                <img class="user-image" src={{image}}>
+                <p class="user-dsecription">{{description}}</p>
+                <div class="social-bar">
+                    <div class="folllowing">{{following}} Following</div>
+                    <div class="followers">{{followers}} Followers</div>
+                    <div class="twitter"><a href="#">{{twitter-link}}</a></div>
+                    <div class="facebook"><a href="#">{{fb-link}}</a></div>
+                </div>
+                <button class="follow-button user">Follow</button>
             </div>
-            <button class="follow-button user">Follow</button>
-        </div>
-    </script>
-    <script id="post-template" type="text/x-hanglebars-template">
-        <div class="post-container">
-            <div class="post-author-info">
-                <div class="author-image-holder"></div>
-                <p class="user-full-name post-author-name" data-id={{id}}>{{full-name}}</p>
-                <span class="post-date">{{date}}</span>
-                <span class="post-length">{{postWordCount}}</span>
+        </script>
+        <script id="post-template" type="text/x-hanglebars-template">
+            <div class="post-container">
+                <div class="post-author-info">
+                    <div class="author-image-holder"></div>
+                    <p class="user-full-name post-author-name" data-id={{id}}>{{full-name}}</p>
+                    <span class="post-date">{{date}}</span>
+                    <span class="post-length">{{postWordCount}}</span>
+                </div>
+                <div class="post-content">
+                    <img class="post-image" src={{image}}>
+                    <h1 class="post-title">{{postTitle}}</h1>
+                    <p class="read-more"><a href={{bodyLink}}>Read More...</a></p>
+                </div>
+                <div class="social-bar post">
+                    <img class="heart-favicon" src="http://bit.ly/2lr1FRv">
+                    <p>{{favorited}}</p>
+                    <p>{{responded}} responded</p>
+                    <img class="bookmark-favicon" src="http://bit.ly/2kx7LAE">
+                </div>
             </div>
-            <div class="post-content">
-                <img class="post-image" src={{image}}>
-                <h1 class="post-title">{{postTitle}}</h1>
-                <p class="read-more"><a href={{bodyLink}}>Read More...</a></p>
-            </div>
-            <div class="social-bar post">
-                <img class="heart-favicon" src="http://bit.ly/2lr1FRv">
-                <p>{{favorited}}</p>
-                <p>{{responded}} responded</p>
-                <img class="bookmark-favicon" src="http://bit.ly/2kx7LAE">
-            </div>
-        </div>
-    </script>
-    <script src="src/js/vendor/jquery-3.1.1.min.js "></script>
-    <script src="src/js/vendor/handlebars-v4.0.5.js "></script>
-    <script src="src/js/main.js"></script>
+        </script>
+        <script src="src/js/vendor/jquery-3.1.1.min.js "></script>
+        <script src="src/js/vendor/handlebars-v4.0.5.js "></script>
+        <script src="src/js/main.js"></script>
 </body>
 
 </html>
