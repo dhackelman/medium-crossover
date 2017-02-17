@@ -36,7 +36,7 @@
               favorited: this.favorited,
               responded: this.responded
               //eventually link to body of article
-            },
+            };
             const html = template(context);
             $('post-container').prepend(html);
           }
