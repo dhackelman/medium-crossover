@@ -48,22 +48,26 @@
         }
 
         function buildTemplateWithData() {
-          const settings = {
-              "async": true,
-              "crossDomain": true,
-              "dataType": "json",
-              "url": `https://medium-crossover.herokuapp.com/posts`,
-              "method": "GET",
-              "headers": {
-                "Access-Control-Allow-Origin":"*"
-              }
-          };
-          $.ajax(settings).then(function(response) {
-              // for (let i = 0; i < response.length; i++) {
-              //     new IndividualStories(response[i]);
-              // }
-              console.log(response);
-          });
+          $.get("https://medium-crossover.herokuapp.com/posts").done(
+            function (data) {
+              console.log(data);
+
+          // const settings = {
+          //     "async": true,
+          //     "crossDomain": true,
+          //     "dataType": "jsonp",
+          //     "url": `https://medium-crossover.herokuapp.com/posts`,
+          //     "method": "GET",
+          //     "headers": {
+          //       "Access-Control-Allow-Origin":"*"
+          //     }
+          // };
+          // $.ajax(settings).then(function(response) {
+          //     // for (let i = 0; i < response.length; i++) {
+          //     //     new IndividualStories(response[i]);
+          //     // }
+          //     console.log(response);
+          // });
         }
 
         function clickCategories() {
