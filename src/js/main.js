@@ -52,7 +52,10 @@
               "async": true,
               "crossDomain": true,
               "url": `https://medium-crossover.herokuapp.com/posts`,
-              "method": "GET"
+              "method": "GET",
+              "headers": {
+                "Access-Control-Allow-Origin"
+              }
           };
           $.ajax(settings).then(function(response) {
               // for (let i = 0; i < response.length; i++) {
