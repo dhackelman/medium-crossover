@@ -12,7 +12,7 @@
             this.image = storyData.image;
             this.fullName = storyData.fullName;
             this.date = storyData.date;
-            this.postWordCount: storyData.postWordCount;
+            this.postWordCount = storyData.postWordCount;
             this.id = storyData.id;
             this.postTitle = storyData.postTitle;
             this.favorited = storyData.favorited;
