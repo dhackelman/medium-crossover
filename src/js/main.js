@@ -54,7 +54,7 @@
               "url": `https://medium-crossover.herokuapp.com/posts`,
               "method": "GET",
               "headers": {
-                "Access-Control-Allow-Origin"
+                "Access-Control-Allow-Origin":"*"
               }
           };
           $.ajax(settings).then(function(response) {
