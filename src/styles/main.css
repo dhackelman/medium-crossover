@@ -201,7 +201,11 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-bottom: 1px solid #e5e5e5; }
+  border-bottom: 1px solid #e5e5e5;
+  font-size: .8rem;
+  padding-left: 10%;
+  padding-right: 10%;
+  width: 100%; }
 
 .logo-image {
   align-items: center;
@@ -210,13 +214,16 @@ header {
   color: #4c4c4c; }
   .logo-image img {
     display: inline-block;
-    vertical-align: middle; }
+    vertical-align: middle;
+    width: 75px;
+    height: 75px; }
 
 .user-start {
   align-items: center;
   color: #00AB6C;
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  font-size: 1rem; }
   .user-start a {
     color: #00AB6C;
     margin: 15px;
@@ -226,9 +233,11 @@ header {
   align-items: center;
   display: flex;
   flex-direction: row;
+  font-size: .8rem;
   justify-content: flex-start;
   list-style: none;
-  padding: 2% 0; }
+  padding: 1% 10%;
+  width: 100%; }
   .categories-menu a {
     color: #7f7f7f;
     margin: 15px;
