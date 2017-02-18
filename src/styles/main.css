@@ -252,8 +252,11 @@ header {
     margin: 15px;
     text-decoration: none; }
 
-.side-content-bar a {
-  text-decoration: none; }
+.side-content-bar {
+  font-size: .9rem;
+  font-weight: 300; }
+  .side-content-bar a {
+    text-decoration: none; }
 
 .top-stories-content, .author-picks-content, .stories-tag-content {
   border-bottom: 1px solid #e5e5e5;
@@ -264,8 +267,17 @@ header {
   .top-stories-content p, .author-picks-content p, .stories-tag-content p {
     padding: 2% 1%; }
 
-.front-page-footer a {
-  color: #7f7f7f;
-  margin: 3px; }
+.write-story {
+  margin: 2%; }
+
+.front-page-footer {
+  font-size: .8rem;
+  font-weight: 300;
+  margin: 2% auto; }
+  .front-page-footer span {
+    padding: 2% 0; }
+  .front-page-footer a {
+    color: #7f7f7f;
+    margin: 3px; }
 
 /*# sourceMappingURL=main.css.map */

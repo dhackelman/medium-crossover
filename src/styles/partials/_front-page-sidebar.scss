@@ -1,4 +1,6 @@
 .side-content-bar {
+  font-size: .9rem;
+  font-weight: 300;
     a {
         text-decoration: none;
     }
@@ -19,8 +21,19 @@
     }
 }
 
+.write-story {
+  margin: 2%;
+}
+
 
 .front-page-footer {
+  font-size: .8rem;
+  font-weight: 300;
+  margin: 2% auto;
+
+  span {
+    padding: 2% 0;
+  }
     a {
         color: #7f7f7f;
         margin: 3px;
