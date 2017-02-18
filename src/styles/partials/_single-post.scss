@@ -6,7 +6,7 @@
   padding: 1% 5% 0% 5%;
   margin: 2% 5% 2% auto;
   width: 700px;
-  min-height: 320px;
+  min-height: 350px;
 }
 
 .author-image-holder {
@@ -51,8 +51,10 @@
 
   .post-title{
     font-family: $headers;
-    font-size: 1.5rem;
-    margin-bottom: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 5% auto 2% auto;
+    text-transform: capitalize;
   }
 
   .read-more {
@@ -68,20 +70,21 @@
 
 
 .social-bar {
-  display: flex;
+  display: inline-block;
+  overflow: hidden;
   margin-top: 0;
   height: 40px;
   width: 100%;
 
   .heart-favicon {
-    height: 20px;
-    margin: 2% auto 0 0;
+    height: 25px;
+    float: left;
     width: 20px;
   }
 
   .bookmark-favicon {
-    height: 20px;
-    margin: 2% 2% 0 auto;
+    height: 25px;
+    float: right;
     width: 20px;
   }
 }
