@@ -255,7 +255,10 @@ header {
 
 .side-content-bar {
   font-size: .9rem;
-  font-weight: 300; }
+  font-weight: 300;
+  position: fixed;
+  top: 125px;
+  right: 0; }
   .side-content-bar a {
     text-decoration: none; }
 
