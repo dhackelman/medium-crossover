@@ -6,6 +6,11 @@
       const signInButton = document.querySelector('.sign-in-link');
       const categoriesButtons = $('.categories-menu');
       const postContainer = document.querySelector('.post-container');
+      const closeSignUpDiv = document.querySelector('.close-div');
+      const signInCont = document.querySelector('.sign-in-page');
+      const signInBut = document.querySelector('.author-write-story');
+      const createUserForm = document.querySelector('.sign-in-form');
+      const createUserButton = document.querySelector('.create-user');
 
         class IndividualStories {
           constructor(storyData) {
@@ -65,6 +70,8 @@
           writeStoryButton();
           signInSignUp();
           clickCategories();
+          closeSignUp();
+          createUser();
         }
 
         function buildTemplateWithData() {
@@ -86,6 +93,55 @@
           });
         }
 
+        function closeSignUp() {
+          closeSignUpDiv.addEventListener('click', function() {
+            event.preventDefault();
+            signInCont.classList.add('hide');
+          })
+        }
+
+        function createUser() {
+          createUserForm.addEventListener('submit', function() {
+            event.preventDefault();
+            let userData = {};
+            console.log(event.target[0].value);
+            console.log(event.target[1].value);
+
+            for (let i=0; i<event.target.length; i++) {
+              userData.name = event.target[0].value;
+              userData.description = event.target[1].value;
+            }
+            console.log(userData);
+            sendUserData(userData);
+          })
+        }
+
+        function sendUserData(userData) {
+            const settings = {
+                method: 'POST',
+                url: `https://medium-crossover.herokuapp.com/users`,
+                headers: {
+                    "content-type": "application/json;charset=utf-8"
+                },
+                data: JSON.stringify(userData)
+            };
+
+            $.ajax(settings).then((response) => {
+                console.log('success');
+            }).catch((error) => {
+                console.log(error);
+            });
+        }
+
+
+
+
+
+
+
+
+
+
         function populateSideStories(arg) {
           new SideStories (arg);
         }
@@ -95,9 +151,7 @@
         function signInSignUp () {
           signInButton.addEventListener('click', () => {
             console.log('in');
-            var signInCont = document.querySelector('.sign-in-page');
-            var signInBut = document.querySelector('.author-write-story')
-            signInCont.classList += 'hide';
+            signInCont.classList.remove('hide');
             });
         }
 

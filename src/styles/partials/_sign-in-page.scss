@@ -6,6 +6,18 @@
   z-index: 5;
 }
 
+.close-div {
+  background-color: transparent;
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  position: fixed;
+  top: 0;
+  right: 10%;
+  margin: 2%;
+  width: 60px;
+}
+
 .form {
   position: relative;
   z-index: 1;
@@ -27,7 +39,7 @@
   box-sizing: border-box;
   font-size: 14px;
 }
-.form button {
+.form .button {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
