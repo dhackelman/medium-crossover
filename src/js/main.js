@@ -53,25 +53,10 @@
                 new IndividualStories(response[i]);
             }
             console.log(response);
+          });
+        }
 
-          // const settings = {
-          //     "async": true,
-          //     "crossDomain": true,
-          //     "dataType": "jsonp",
-          //     "url": `https://medium-crossover.herokuapp.com/posts`,
-          //     "method": "GET",
-          //     "headers": {
-          //       "Access-Control-Allow-Origin":"*"
-          //     }
-          // };
-          // $.ajax(settings).then(function(response) {
-          //     // for (let i = 0; i < response.length; i++) {
-          //     //     new IndividualStories(response[i]);
-          //     // }
-          //     console.log(response);
-          // });
-        });
-      }
+
 
         function clickCategories() {
           categoriesButtons.on('click', 'li', function() {
@@ -84,7 +69,10 @@
         function signInSignUp () {
           signInButton.addEventListener('click', () => {
             console.log('in');
-          })
+            var signInCont = document.querySelector('.sign-in-page');
+            var signInBut = document.querySelector('.author-write-story')
+            signInCont.classList += 'hide';
+            });
         }
 
         function writeStoryButton() {
