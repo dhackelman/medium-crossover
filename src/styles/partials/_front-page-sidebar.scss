@@ -4,29 +4,21 @@
     }
 }
 
-.top-stories-content {
+.top-stories-content, .author-picks-content, .stories-tag-content {
     border-bottom: 1px solid #e5e5e5;
+    padding: 2% 1%;
+    font-size: .8rem;
 
     a {
         color: #4c4c4c;
+
+    }
+
+    p {
+      padding: 2% 1%;
     }
 }
 
-.author-picks-content {
-    border-bottom: 1px solid #e5e5e5;
-
-    a {
-        color: #4c4c4c;
-    }
-}
-
-.stories-tag-content {
-    border-bottom: 1px solid #e5e5e5;
-
-    a {
-        color: #4c4c4c;
-    }
-}
 
 .front-page-footer {
     a {

@@ -3,10 +3,13 @@
     flex-direction: row;
     justify-content: space-between;
     border-bottom: 1px solid #e5e5e5;
-    font-size: .8rem;
     padding-left: 10%;
     padding-right: 10%;
     width: 100%;
+
+    h1 {
+      font-size: 1.25rem;
+    }
 }
 
 .logo-image {
@@ -18,8 +21,8 @@
     img {
       display: inline-block;
       vertical-align: middle;
-      width: 75px;
-      height: 75px;
+      width: 50px;
+      height: 50px;
     }
 }
 
@@ -28,14 +31,21 @@
     color: #00AB6C;
     display: flex;
     flex-direction: row;
-    font-size: 1rem;
-
-
+    font-size: .9rem;
+    font-weight: 300;
 
     a {
         color: #00AB6C;
         margin: 15px;
         text-decoration: none;
+    }
+
+    button {
+      border: none;
+      background-color: transparent;
+      color: $darkgrey;
+      font-size: .9rem;
+      font-weight: 300;
     }
 }
 

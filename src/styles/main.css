@@ -56,12 +56,12 @@ img {
 
 body {
   font-family: "PT Sans", sans-serif;
-  font-size: 14px; }
+  font-size: 6px; }
 
 header {
   background-color: white;
   font-family: "Roboto", sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   width: 95%; }
 
 .main-content-body {
@@ -71,12 +71,13 @@ header {
   width: 100%; }
   .main-content-body .each-content-box {
     float: left;
-    width: 65%; }
+    width: 70%; }
   .main-content-body .side-content-bar {
     float: right;
     font-family: "Roboto", sans-serif;
     font-size: 1.25rem;
-    width: 35%; }
+    margin-right: 5%;
+    width: 25%; }
 
 .stories-content-box {
   width: 100%; }
@@ -202,10 +203,11 @@ header {
   flex-direction: row;
   justify-content: space-between;
   border-bottom: 1px solid #e5e5e5;
-  font-size: .8rem;
   padding-left: 10%;
   padding-right: 10%;
   width: 100%; }
+  .sign h1 {
+    font-size: 1.25rem; }
 
 .logo-image {
   align-items: center;
@@ -215,19 +217,26 @@ header {
   .logo-image img {
     display: inline-block;
     vertical-align: middle;
-    width: 75px;
-    height: 75px; }
+    width: 50px;
+    height: 50px; }
 
 .user-start {
   align-items: center;
   color: #00AB6C;
   display: flex;
   flex-direction: row;
-  font-size: 1rem; }
+  font-size: .9rem;
+  font-weight: 300; }
   .user-start a {
     color: #00AB6C;
     margin: 15px;
     text-decoration: none; }
+  .user-start button {
+    border: none;
+    background-color: transparent;
+    color: #4c4c4c;
+    font-size: .9rem;
+    font-weight: 300; }
 
 .categories-menu {
   align-items: center;
@@ -246,20 +255,14 @@ header {
 .side-content-bar a {
   text-decoration: none; }
 
-.top-stories-content {
-  border-bottom: 1px solid #e5e5e5; }
-  .top-stories-content a {
+.top-stories-content, .author-picks-content, .stories-tag-content {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 2% 1%;
+  font-size: .8rem; }
+  .top-stories-content a, .author-picks-content a, .stories-tag-content a {
     color: #4c4c4c; }
-
-.author-picks-content {
-  border-bottom: 1px solid #e5e5e5; }
-  .author-picks-content a {
-    color: #4c4c4c; }
-
-.stories-tag-content {
-  border-bottom: 1px solid #e5e5e5; }
-  .stories-tag-content a {
-    color: #4c4c4c; }
+  .top-stories-content p, .author-picks-content p, .stories-tag-content p {
+    padding: 2% 1%; }
 
 .front-page-footer a {
   color: #7f7f7f;

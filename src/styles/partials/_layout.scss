@@ -1,13 +1,13 @@
 body {
   font-family: $bodyfonts;
-  font-size: 14px;
+  font-size: 6px;
 
 }
 
 header {
   background-color: white;
   font-family: $systemfonts;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   width: 95%;
 }
 
@@ -19,13 +19,14 @@ header {
 
   .each-content-box {
     float: left;
-    width: 65%;
+    width: 70%;
   }
 
   .side-content-bar {
     float: right;
     font-family: $systemfonts;
     font-size:1.25rem;
-    width: 35%;
+    margin-right: 5%;
+    width: 25%;
   }
 }
