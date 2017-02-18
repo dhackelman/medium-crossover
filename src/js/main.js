@@ -39,6 +39,27 @@
 
         }
 
+        class SideStories {
+          constructor(storyData) {
+            this.fullName = storyData.user_id;
+            this.postTitle = storyData.title;
+            this.build();
+          }
+
+
+          build() {
+            const source = $('#post-template').html();
+            const template = Handlebars.compile(source);
+            const context = {
+              fullName: this.fullName,
+              postTitle: this.postTitle
+            };
+            const html = template(context);
+            $('.stories-content-box').prepend(html);
+          }
+
+        }
+
         function bindEvents() {
           buildTemplateWithData();
           writeStoryButton();
@@ -51,6 +72,7 @@
             function (response) {
               for (let i = 0; i < response.length; i++) {
                 new IndividualStories(response[i]);
+                populateSideStories(response[i]);
             }
             console.log(response);
           });
@@ -62,6 +84,10 @@
           categoriesButtons.on('click', 'li', function() {
             console.log('in');
           });
+        }
+
+        function populateSideStories(arg) {
+          new SideStories (arg);
         }
 
 
