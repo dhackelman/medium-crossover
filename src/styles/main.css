@@ -259,6 +259,49 @@ header {
     float: right;
     width: 20px; }
 
+.post-container-side-style {
+  background-color: transparent;
+  line-height: 1;
+  padding: 1% 5% 0% 5%;
+  margin: 2% 5% 2% auto;
+  display: block;
+  width: 100%; }
+
+.author-image-holder-side-style {
+  background: url(http://i.imgur.com/bWv7tvS.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: inline-block;
+  float: left;
+  border-radius: 50%;
+  height: 30px;
+  margin: 7% 5% 0 2%;
+  vertical-align: middle;
+  width: 30px; }
+
+.post-author-name-side-style {
+  font-size: .8rem;
+  font-weight: 400;
+  margin: 1%;
+  text-transform: capitalize;
+  display: inline-block; }
+
+.post-date {
+  font-size: .8rem;
+  margin: 0 1%;
+  width: 10%; }
+
+.post-content-side-style {
+  margin: 1% auto;
+  width: 100%; }
+  .post-content-side-style .post-title-side-style {
+    font-family: "Quicksand", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 2% auto 2% auto;
+    text-transform: capitalize; }
+
 .sign {
   display: flex;
   flex-direction: row;

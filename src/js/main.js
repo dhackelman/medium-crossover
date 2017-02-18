@@ -46,16 +46,16 @@
             this.build();
           }
 
-
           build() {
-            const source = $('#post-template').html();
+            const source = $('#side-bar-template').html();
             const template = Handlebars.compile(source);
             const context = {
               fullName: this.fullName,
               postTitle: this.postTitle
             };
             const html = template(context);
-            $('.stories-content-box').prepend(html);
+            $('.user-stories-container').prepend(html);
+            $('.authors-picks').prepend(html);
           }
 
         }
