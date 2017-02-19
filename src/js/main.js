@@ -101,6 +101,7 @@
             createUser();
             authorPostBody();
             sideBarContentShow();
+            usersTab();
         }
 
         function buildTemplateWithData() {
@@ -127,6 +128,22 @@
                    console.log(response);
                });
        }
+
+      //  function deleteUserRequest(arg) {
+      //   const settings = {
+      //       method: 'DELETE',
+      //       url: `https://medium-crossover.herokuapp.com/users/${arg}`,
+      //       headers: {
+      //           "content-type": "application/json;charset=utf-8"
+      //       }
+      //   };
+       //
+      //     $.ajax(settings).then((response) => {
+      //       console.log(response);
+      //     }).catch((error) => {
+      //       console.log(error);
+      //     });
+      //  }
 
         function authorPostBody() {
             $(".stories-content-box").on('click', ".post-container", function() {
@@ -212,10 +229,10 @@
             });
         }
 
-        function getNewUsers(id) {
+        function getNewUsers() {
             $.get("https://medium-crossover.herokuapp.com/users/").then(
                 function(response) {
-                    $('.users-box').html('');
+                    $('.users-box').empty();
                     for (let i = 0; i < response.length; i++) {
                         // console.log(response);
                         new UserMaker(response[i]);
@@ -223,6 +240,19 @@
 
                 }).catch();
         }
+
+        function usersTab() {
+           $('.users-tab').on('click', 'li', function() {
+               event.preventDefault();
+               getNewUsers();
+               $('.users-box').toggleClass('hide');
+               $('.stories-content-box').toggleClass('hide');
+               $('.side-content-bar').toggleClass('hide');
+
+               console.log('in');
+           });
+       }
+
 
         function populateSideStories(arg) {
             new SideStories(arg);
