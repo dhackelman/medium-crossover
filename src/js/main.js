@@ -14,8 +14,8 @@
 
         class IndividualStories {
           constructor(storyData) {
-            this.image = storyData.image;
-            this.fullName = storyData.user_id;
+            this.image = storyData.user.image;
+            this.fullName = storyData.user.name;
             this.date = storyData.created_at;
             this.postWordCount = storyData.postWordCount;
             this.id = storyData.id;
@@ -65,6 +65,26 @@
 
         }
 
+        class UserMaker {
+          constructor(apple) {
+            this.fullName = apple.name;
+            this.image = apple.image;
+            this.build();
+          }
+
+          build() {
+            const source = $('#user-template').html();
+            const template = Handlebars.compile(source);
+            const context = {
+              fullName: this.fullName,
+              image: this.image
+            };
+            const html = template(context);
+            $('.stories-content-box').prepend(html);
+          }
+
+        }
+
         function bindEvents() {
           buildTemplateWithData();
           writeStoryButton();
@@ -110,9 +130,11 @@
             for (let i=0; i<event.target.length; i++) {
               userData.name = event.target[0].value;
               userData.description = event.target[1].value;
+              userData.image = event.target[2].value;
             }
             console.log(userData);
             sendUserData(userData);
+            getNewUsers();
           })
         }
 
@@ -133,14 +155,16 @@
             });
         }
 
+        function getNewUsers(id) {
+          $.get("https://medium-crossover.herokuapp.com/users/`${id}`").then(
+            function (response) {
+              for (let i = 0; i < response.length; i++) {
+                console.log(response);
+                new UserMaker(response[i]);
+            }
 
-
-
-
-
-
-
-
+          }).catch();
+        }
 
         function populateSideStories(arg) {
           new SideStories (arg);

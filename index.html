@@ -20,7 +20,7 @@
            <form class="register-form">
             <input type="text" placeholder="name"/>
             <input type="text" placeholder="description"/>
-            <input type="text" placeholder="email address"/>
+            <input type="text" placeholder="image"/>
             <input  type='submit' value="create" class=".create-user">
             <p class="message">Already registered? <a href="#">Sign In</a></p>
           </form>
@@ -154,7 +154,7 @@
             <div class="post-container side-style">
                 <div class="post-author-info side-style">
                     <!-- // inline style the background image with handlebars -->
-                    <div class="author-image-holder author-image-holder-side-style"></div>
+                    <div class="author-image-holder author-image-holder-side-style"><img src={{image}}></div>
                     <p class="user-full-name post-author-name post-author-name-side-style" data-id={{id}}>{{fullName}}</p>
                     <span class="post-date post-date-side-style">{{date}}</span>
                     <span class="post-length post-length-side-style">{{postWordCount}}</span>
@@ -182,6 +182,15 @@
                     <h1 class="post-title-side-style">{{postTitle}}</h1>
                     <p class="post-author-name-side-style" data-id={{id}}>{{fullName}}</p>
                     <span class="post-date-side-style">{{date}}</span>
+                </div>
+            </div>
+        </script>
+        <script id="user-template" type="text/x-handlebars-template">
+            <div class="post-container-side-style">
+                <div class="post-author-info-side-style">
+                    <!-- // inline style the background image with handlebars -->
+                    <div class="author-image-holder-side-style"><img src={{image}}></div>
+                    <p>{{fullName}}</p>
                 </div>
             </div>
         </script>
