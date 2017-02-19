@@ -21,7 +21,7 @@
                 <input type="text" placeholder="name" />
                 <input type="text" placeholder="description" />
                 <input type="text" placeholder="image" />
-                <input type='submit' value="create" class=".create-user">
+                <input class="create-user" type='submit' value="create" />
                 <p class="message">Already registered? <a href="#">Sign In</a></p>
             </form>
         </div>
@@ -54,6 +54,7 @@
     </header>
 
     <div class="main-content-body">
+        <div class="users-box hide"></div>
         <div class="stories-content-box">
 
         </div>
@@ -193,11 +194,19 @@
         </div>
     </script>
     <script id="user-template" type="text/x-handlebars-template">
-        <div class="post-container-side-style">
-            <div class="post-author-info-side-style">
+        <div class="user-container" data-id={{id}}>
+            <div class="user-info">
                 <!-- // inline style the background image with handlebars -->
-                <div class="author-image-holder-side-style"><img src={{image}}></div>
-                <p>{{fullName}}</p>
+                <div class="author-image-holder"><img src={{image}}></div>
+                <p class="user-full-name">{{fullName}}</p>
+                <p class="user-description">{{description}}</p>
+            </div>
+            <div class="user-stats">
+              <p class="following">{{randNum1}}</p>
+              <p class="followers">{{randNum2}}</p>
+              <p class="twitter">Twit Link</p>
+              <p class="facebook">FB link</p>
+              <button class="follow-button">Follow</button>
             </div>
         </div>
     </script>

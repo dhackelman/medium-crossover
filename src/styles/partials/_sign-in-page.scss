@@ -39,7 +39,8 @@
   box-sizing: border-box;
   font-size: 14px;
 }
-.form .button {
+
+form .create-user {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
@@ -53,8 +54,13 @@
   transition: all 0.3 ease;
   cursor: pointer;
 }
-.form button:hover,.form button:active,.form button:focus {
+.create-user:hover, .create-user:focus {
   background: #00AB6C;
+}
+
+.create-user:active {
+  background-color: #f2f2f2;
+  color: #00AB6C;
 }
 .form .message {
   margin: 15px 0 0;
