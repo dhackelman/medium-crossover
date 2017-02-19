@@ -151,30 +151,29 @@ form .create-user {
 .hide {
   display: none; }
 
-.user-info {
-  background-color: white;
-  border-bottom: 2px solid gray;
-  margin: 5% auto;
-  padding: 5% 5%;
+.users-box {
+  margin: 0 auto;
   width: 50%; }
-
-.user-full-name {
-  display: inline-block;
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin: 0;
-  text-transform: capitalize; }
-
-.author-image-holder {
-  background: url(http://i.imgur.com/bWv7tvS.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  border-radius: 100%;
-  float: right;
-  height: 120px;
-  margin: 2%;
-  width: 120px; }
+  .users-box .user-info {
+    background-color: white;
+    border-bottom: 2px solid gray;
+    display: flex;
+    justify-content: center;
+    margin: 5% auto;
+    padding: 5% 5%;
+    width: 90%; }
+    .users-box .user-info .user-full-name {
+      display: inline-block;
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin: 0;
+      text-transform: capitalize; }
+  .users-box .user-image-holder {
+    float: left;
+    height: 120px;
+    margin: 2%;
+    width: 120px;
+    border-radius: 50%; }
 
 .following, .followers {
   display: inline-block;

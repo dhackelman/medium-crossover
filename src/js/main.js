@@ -87,7 +87,7 @@
                     image: this.image
                 };
                 const html = template(context);
-                $('.stories-content-box').prepend(html);
+                $('.users-box').prepend(html);
             }
 
         }
@@ -113,6 +113,20 @@
                     console.log(response);
                 });
         }
+
+        function buildTemplateWithRandom() {
+           $.get("https://medium-crossover.herokuapp.com/posts").then(
+               function(response) {
+                   response.sort(function(a, b) {
+                       return 0.5 - Math.random();
+                   });
+                   for (let i = 0; i < response.length; i++) {
+                       new IndividualStories(response[i]);
+                       populateSideStories(response[i]);
+                   }
+                   console.log(response);
+               });
+       }
 
         function authorPostBody() {
             $(".stories-content-box").on('click', ".post-container", function() {
@@ -152,10 +166,10 @@
         }
 
         function clickCategories() {
-            categoriesButtons.on('click', 'li', function() {
-                console.log('in');
-            });
-        }
+           categoriesButtons.on('click', 'li', function() {
+               buildTemplateWithRandom();
+           });
+       }
 
         function closeSignUp() {
             closeSignUpDiv.addEventListener('click', function() {
@@ -168,9 +182,6 @@
             createUserForm.addEventListener('submit', function() {
                 event.preventDefault();
                 let userData = {};
-                console.log(event.target[0].value);
-                console.log(event.target[1].value);
-
                 for (let i = 0; i < event.target.length; i++) {
                     userData.name = event.target[0].value;
                     userData.description = event.target[1].value;
@@ -179,6 +190,8 @@
                 console.log(userData);
                 sendUserData(userData);
                 getNewUsers();
+                $('.users-box').toggleClass('hide');
+                $('.sign-in-page').toggleClass('hide');
             });
         }
 
@@ -193,17 +206,18 @@
             };
 
             $.ajax(settings).then((response) => {
-                console.log('success');
+                console.log(response);
             }).catch((error) => {
                 console.log(error);
             });
         }
 
         function getNewUsers(id) {
-            $.get("https://medium-crossover.herokuapp.com/users/`${id}`").then(
+            $.get("https://medium-crossover.herokuapp.com/users/").then(
                 function(response) {
+                    $('.users-box').html('');
                     for (let i = 0; i < response.length; i++) {
-                        console.log(response);
+                        // console.log(response);
                         new UserMaker(response[i]);
                     }
 
@@ -213,8 +227,6 @@
         function populateSideStories(arg) {
             new SideStories(arg);
         }
-
-
 
         function signInSignUp() {
             signInButton.addEventListener('click', () => {
@@ -229,9 +241,13 @@
             });
         }
 
+        function deleteUsers() {
+          $('.users-box').empty();
+        }
+
         function init() {
             bindEvents();
-            // loadStories();
+            deleteUsers();
         }
 
         return {
