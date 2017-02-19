@@ -69,7 +69,11 @@ header {
   overflow: hidden;
   padding: 2% 0;
   width: 100%; }
-  .main-content-body .each-content-box {
+  .main-content-body .whole-page {
+    margin: 5% auto;
+    width: 150%;
+    background: red; }
+  .main-content-body .stories-content-box {
     float: left;
     width: 70%; }
   .main-content-body .side-content-bar {
@@ -205,9 +209,9 @@ header {
   border: 1px solid #fafafa;
   box-shadow: 0 0 1px #888888;
   line-height: 1;
-  padding: 1% 5% 0% 5%;
+  padding: 1% 5% 0;
   margin: 2% 5% 2% auto;
-  width: 700px;
+  width: 80%;
   min-height: 350px; }
 
 .author-image-holder {
@@ -220,12 +224,13 @@ header {
 .post-author-name {
   font-size: 1.25rem;
   font-weight: 700;
-  margin: 1% 0 0 0;
+  margin: 1% 0 0;
   text-transform: capitalize;
   display: block; }
 
-.post-date, .post-length {
-  font-size: .8rem;
+.post-date,
+.post-length {
+  font-size: 0.8rem;
   margin: 0 1%;
   width: 10%; }
 
@@ -240,13 +245,13 @@ header {
     font-family: "Quicksand", sans-serif;
     font-size: 2rem;
     font-weight: 700;
-    margin: 5% auto 2% auto;
+    margin: 5% auto 2%;
     text-transform: capitalize; }
   .post-content .read-more {
     margin-bottom: 0; }
     .post-content .read-more a {
       color: gray;
-      font-size: .8rem;
+      font-size: 0.8rem;
       text-decoration: none; }
 
 .social-bar {

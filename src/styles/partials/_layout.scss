@@ -1,32 +1,37 @@
 body {
-  font-family: $bodyfonts;
-  font-size: 6px;
-
+    font-family: $bodyfonts;
+    font-size: 6px;
 }
 
 header {
-  background-color: white;
-  font-family: $systemfonts;
-  font-size: 1.5rem;
-  width: 95%;
+    background-color: white;
+    font-family: $systemfonts;
+    font-size: 1.5rem;
+    width: 95%;
 }
 
 .main-content-body {
-  background-color: $lightgrey;
-  overflow: hidden;
-  padding: 2% 0;
-  width: 100%;
+    background-color: $lightgrey;
+    overflow: hidden;
+    padding: 2% 0;
+    width: 100%;
 
-  .each-content-box {
-    float: left;
-    width: 70%;
-  }
+    .whole-page {
+        margin: 5% auto;
+        width: 150%;
+        background: red;
+    }
 
-  .side-content-bar {
-    float: right;
-    font-family: $systemfonts;
-    font-size:1.25rem;
-    margin-right: 5%;
-    width: 25%;
-  }
+    .stories-content-box {
+        float: left;
+        width: 70%;
+    }
+
+    .side-content-bar {
+        float: right;
+        font-family: $systemfonts;
+        font-size: 1.25rem;
+        margin-right: 5%;
+        width: 25%;
+    }
 }

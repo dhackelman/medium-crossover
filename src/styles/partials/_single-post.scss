@@ -1,84 +1,84 @@
 .post-container {
-  background-color: white;
-  border: 1px solid $lightgrey;
-  box-shadow: 0 0 1px #888888;
-  line-height: 1;
-  padding: 1% 5% 0% 5%;
-  margin: 2% 5% 2% auto;
-  width: 700px;
-  min-height: 350px;
+    background-color: white;
+    border: 1px solid $lightgrey;
+    box-shadow: 0 0 1px #888888;
+    line-height: 1;
+    padding: 1% 5% 0;
+    margin: 2% 5% 2% auto;
+    width: 80%;
+    min-height: 350px;
 }
 
 .author-image-holder {
-  display: inline-block;
-  float: left;
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;
+    display: inline-block;
+    float: left;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
 }
 
 .post-author-name {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin: 1% 0 0 0;
-  text-transform: capitalize;
-  display: block;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 1% 0 0;
+    text-transform: capitalize;
+    display: block;
 }
 
-.post-date, .post-length {
-  font-size: .8rem;
-  margin: 0 1%;
-  width: 10%;
+.post-date,
+.post-length {
+    font-size: 0.8rem;
+    margin: 0 1%;
+    width: 10%;
 }
 
 .post-content {
-  margin: 1% auto;
-  width: 100%;
+    margin: 1% auto;
+    width: 100%;
 
-  .post-image {
-    width: 70%;
+    .post-image {
+        width: 70%;
 
-    img {
-      width: 100%;
+        img {
+            width: 100%;
+        }
     }
-  }
 
-  .post-title{
-    font-family: $headers;
-    font-size: 2rem;
-    font-weight: 700;
-    margin: 5% auto 2% auto;
-    text-transform: capitalize;
-  }
-
-  .read-more {
-    margin-bottom: 0;
-
-    a {
-      color: gray;
-      font-size: .8rem;
-      text-decoration: none;
+    .post-title {
+        font-family: $headers;
+        font-size: 2rem;
+        font-weight: 700;
+        margin: 5% auto 2%;
+        text-transform: capitalize;
     }
-  }
+
+    .read-more {
+        margin-bottom: 0;
+
+        a {
+            color: gray;
+            font-size: 0.8rem;
+            text-decoration: none;
+        }
+    }
 }
 
-
 .social-bar {
-  display: inline-block;
-  overflow: hidden;
-  margin-top: 0;
-  height: 40px;
-  width: 100%;
+    display: inline-block;
+    overflow: hidden;
+    margin-top: 0;
+    height: 40px;
+    width: 100%;
 
-  .heart-favicon {
-    height: 25px;
-    float: left;
-    width: 20px;
-  }
+    .heart-favicon {
+        height: 25px;
+        float: left;
+        width: 20px;
+    }
 
-  .bookmark-favicon {
-    height: 25px;
-    float: right;
-    width: 20px;
-  }
+    .bookmark-favicon {
+        height: 25px;
+        float: right;
+        width: 20px;
+    }
 }

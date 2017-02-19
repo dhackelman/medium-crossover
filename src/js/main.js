@@ -37,7 +37,8 @@
                     date: this.date,
                     postWordCount: this.postWordCount,
                     id: this.id,
-                    postTitle: this.postTitle
+                    postTitle: this.postTitle,
+                    body: this.body
                     //eventually link to body of article
                 };
                 const html = template(context);
@@ -96,6 +97,8 @@
             clickCategories();
             closeSignUp();
             createUser();
+            authorPostBody();
+            sideBarContentShow();
         }
 
         function buildTemplateWithData() {
@@ -109,7 +112,20 @@
                 });
         }
 
+        function authorPostBody() {
+            $(".stories-content-box").on('click', ".post-container", function() {
+                event.preventDefault();
+                $(".author-post-body").toggleClass('hide');
+                $(".side-content-bar").toggleClass('hide');
+                $('.stories-content-bar').toggleClass('.whole-page');
+            });
+        }
 
+        function sideBarContentShow() {
+            $('.top-stories-content').on('click', '.post-container-side-style', function() {
+                console.log('in');
+            });
+        }
 
         function clickCategories() {
             categoriesButtons.on('click', 'li', function() {

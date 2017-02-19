@@ -54,11 +54,9 @@
     </header>
 
     <div class="main-content-body">
-        <section class="each-content-box">
-            <div class="stories-content-box">
+        <div class="stories-content-box">
 
-            </div>
-        </section>
+        </div>
         <!-- user and tags aside container -->
         <div class="side-content-bar">
             <!-- this is a secondary wrap for ^ container  -->
@@ -153,12 +151,12 @@
                 <div class="twitter"><a href="#">{{twitter-link}}</a></div>
                 <div class="facebook"><a href="#">{{fb-link}}</a></div>
             </div>
-         <button class="follow-button user">Follow</button>
+            <button class="follow-button user">Follow</button>
         </div>
     </script>
 
     <script id="post-template" type="text/x-handlebars-template">
-        <div class="post-container">
+        <div class="post-container" data-id={{id}}>
             <div class="post-author-info">
                 <div class="author-image-holder" style="background: url({{image}}); no-repeat; background-size: 100%;"></div>
                 <p class="user-full-name post-author-name" data-id={{id}}>{{fullName}}</p>
@@ -168,7 +166,10 @@
             <div class="post-content">
                 <div class="post-image"><img src={{storyImage}}></div>
                 <h1 class="post-title">{{postTitle}}</h1>
-                <p class="read-more"><a href={{bodyLink}}>Read More...</a></p>
+                <p class="read-more">Read More</p>
+            </div>
+            <div class="author-post-body hide">
+                {{body}}
             </div>
             <div class="social-bar post">
                 <img class="heart-favicon" src="http://bit.ly/2lr1FRv">
@@ -182,7 +183,7 @@
         <div class="post-container-side-style">
             <div class="post-author-info-side-style">
                 <!-- // inline style the background image with handlebars -->
-                <div class="author-image-holder-side-style"style="background:url({{image}}); no-repeat; background-size: 100%;"></div>
+                <div class="author-image-holder-side-style" style="background:url({{image}}); no-repeat; background-size: 100%;"></div>
             </div>
             <div class="post-content-side-style">
                 <h1 class="post-title-side-style">{{postTitle}}</h1>
