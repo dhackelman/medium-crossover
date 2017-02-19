@@ -115,15 +115,17 @@
         function authorPostBody() {
             $(".stories-content-box").on('click', ".post-container", function() {
                 event.preventDefault();
-                $(".author-post-body").toggleClass('hide');
-                $(".side-content-bar").toggleClass('hide');
-                $('.stories-content-bar').toggleClass('.whole-page');
+                $('.author-post-body').toggleClass('hide');
+                $('.main-content-body').append($(this).html());
+                $('.side-content-bar').toggleClass('hide');
+                $('.stories-content-box').toggleClass('hide');
             });
         }
 
         function sideBarContentShow() {
             $('.top-stories-content').on('click', '.post-container-side-style', function() {
-                console.log('in');
+                event.preventDefault();
+                $('')
             });
         }
 
