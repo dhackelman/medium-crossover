@@ -211,16 +211,10 @@ header {
   min-height: 350px; }
 
 .author-image-holder {
-  background: url(http://i.imgur.com/bWv7tvS.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
   display: inline-block;
   float: left;
   border-radius: 50%;
   height: 50px;
-  margin: 2%;
-  vertical-align: middle;
   width: 50px; }
 
 .post-author-name {
@@ -307,9 +301,10 @@ header {
   width: 100%; }
   .post-content-side-style .post-title-side-style {
     font-family: "Quicksand", sans-serif;
-    font-size: 1rem;
+    font-size: .8rem;
     font-weight: 400;
-    margin: 2% auto 2% auto;
+    line-height: 1.5;
+    margin: 1% 0;
     text-transform: capitalize; }
 
 .sign {

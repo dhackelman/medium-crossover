@@ -48,7 +48,8 @@
 
         class SideStories {
             constructor(storyData) {
-                this.fullName = storyData.user_id;
+                this.fullName = storyData.user.name;
+                this.image = storyData.user.image;
                 this.postTitle = storyData.title;
                 this.build();
             }
@@ -58,7 +59,8 @@
                 const template = Handlebars.compile(source);
                 const context = {
                     fullName: this.fullName,
-                    postTitle: this.postTitle
+                    postTitle: this.postTitle,
+                    image: this.image
                 };
                 const html = template(context);
                 $('.user-stories-container').prepend(html);
