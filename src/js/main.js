@@ -15,6 +15,7 @@
         class IndividualStories {
           constructor(storyData) {
             this.image = storyData.user.image;
+            this.storyImage = storyData.image;
             this.fullName = storyData.user.name;
             this.date = storyData.created_at;
             this.postWordCount = storyData.postWordCount;
@@ -31,6 +32,7 @@
             const template = Handlebars.compile(source);
             const context = {
               image: this.image,
+              storyImage: this.storyImage,
               fullName: this.fullName,
               date: this.date,
               postWordCount: this.postWordCount,

@@ -153,14 +153,13 @@
         <script id="post-template" type="text/x-handlebars-template">
             <div class="post-container side-style">
                 <div class="post-author-info side-style">
-                    <!-- // inline style the background image with handlebars -->
-                    <div class="author-image-holder author-image-holder-side-style"><img src={{image}}></div>
+                    <div class="author-image-holder author-image-holder-side-style" style="background = url({{image}})"></div>
                     <p class="user-full-name post-author-name post-author-name-side-style" data-id={{id}}>{{fullName}}</p>
                     <span class="post-date post-date-side-style">{{date}}</span>
                     <span class="post-length post-length-side-style">{{postWordCount}}</span>
                 </div>
                 <div class="post-content post-content-side-style">
-                    <div class="post-image post-image-side-style"><img src={{image}}></div>
+                    <div class="post-image post-image-side-style"><img src={{storyImage}}></div>
                     <h1 class="post-title post-title-side-style">{{postTitle}}</h1>
                     <p class="read-more read-more-side-style"><a href={{bodyLink}}>Read More...</a></p>
                 </div>
