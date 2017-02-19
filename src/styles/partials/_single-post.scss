@@ -82,3 +82,36 @@
         width: 20px;
     }
 }
+
+.expand {
+    background-color: white;
+    border: 25px solid $lightgrey;
+    // box-shadow: 0 0 1px #888888;
+    line-height: 1;
+    padding: 1% 5% 0;
+    position: absolute;
+    width: 100vw;
+    min-height: 350px;
+
+    .post-content {
+        margin: 1% auto;
+        width: 100%;
+
+        .post-image {
+          margin: 0 auto;
+          width: 90%;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .author-post-body {
+      font-size: 1rem;
+      line-height: 1.5;
+      padding: 1% 5%;
+      margin: 1% auto;
+    }
+
+}

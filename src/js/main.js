@@ -117,10 +117,12 @@
         function authorPostBody() {
             $(".stories-content-box").on('click', ".post-container", function() {
                 event.preventDefault();
-                $('.author-post-body').toggleClass('hide');
-                $('.main-content-body').append($(this).html());
+                let articleId = $(this).data('id');
+                console.log(articleId);
+                replaceMainContent(articleId);
                 $('.side-content-bar').toggleClass('hide');
-                $('.stories-content-box').toggleClass('hide');
+                $('.author-post-body').toggleClass('hide');
+                $('.post-container').toggleClass('expand');
             });
         }
 
@@ -133,6 +135,7 @@
                 replaceMainContent(articleId);
                 $('.side-content-bar').toggleClass('hide');
                 $('.author-post-body').toggleClass('hide');
+                $('.post-container').toggleClass('expand');
             });
         }
 

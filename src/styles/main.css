@@ -69,10 +69,6 @@ header {
   overflow: hidden;
   padding: 2% 0;
   width: 100%; }
-  .main-content-body .whole-page {
-    margin: 5% auto;
-    width: 150%;
-    background: red; }
   .main-content-body .stories-content-box {
     float: left;
     width: 70%; }
@@ -268,6 +264,28 @@ header {
     height: 25px;
     float: right;
     width: 20px; }
+
+.expand {
+  background-color: white;
+  border: 25px solid #fafafa;
+  line-height: 1;
+  padding: 1% 5% 0;
+  position: absolute;
+  width: 100vw;
+  min-height: 350px; }
+  .expand .post-content {
+    margin: 1% auto;
+    width: 100%; }
+    .expand .post-content .post-image {
+      margin: 0 auto;
+      width: 90%; }
+      .expand .post-content .post-image img {
+        width: 100%; }
+  .expand .author-post-body {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 1% 5%;
+    margin: 1% auto; }
 
 .post-container-side-style {
   background-color: transparent;
