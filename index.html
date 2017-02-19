@@ -14,16 +14,16 @@
 
 <body>
 
-      <div class="sign-in-page hide">
+    <div class="sign-in-page hide">
         <button class="close-div">X</button>
         <div class="sign-in-form form">
-           <form class="register-form">
-            <input type="text" placeholder="name"/>
-            <input type="text" placeholder="description"/>
-            <input type="text" placeholder="image"/>
-            <input  type='submit' value="create" class=".create-user">
-            <p class="message">Already registered? <a href="#">Sign In</a></p>
-          </form>
+            <form class="register-form">
+                <input type="text" placeholder="name" />
+                <input type="text" placeholder="description" />
+                <input type="text" placeholder="image" />
+                <input type='submit' value="create" class=".create-user">
+                <p class="message">Already registered? <a href="#">Sign In</a></p>
+            </form>
         </div>
     </div>
 
@@ -67,7 +67,9 @@
 
                 <!-- Top stories -->
                 <div class="top-stories-content">
-                    <a href="#"><p class="aside-label">Top Stories</p></a>
+                    <a href="#">
+                        <p class="aside-label">Top Stories</p>
+                    </a>
                     <!-- Container with top stories and their author  -->
                     <div class="user-top-stories-container">
                         <!-- Individual user stories to be plugged in -->
@@ -81,7 +83,9 @@
 
                 <!-- Authors Picks -->
                 <div class="author-picks-content">
-                    <a href="#"><p class="aside-label">Author's Picks</p></a>
+                    <a href="#">
+                        <p class="aside-label">Author's Picks</p>
+                    </a>
                     <!-- Container with authors picks and their author  -->
                     <div class="author-picks-stories-container">
                         <!-- Individual author picks to be plugged in -->
@@ -95,7 +99,9 @@
 
                 <!-- One Tag -->
                 <div class="stories-tag-content">
-                    <a href="#"><p class="aside-label">Tags</p></a>
+                    <a href="#">
+                        <p class="aside-label">Tags</p>
+                    </a>
                     <!-- Containers with stories to do with category  -->
                     <div class="tag-stories-container">
                         <!-- Individual stories with category -->
@@ -128,7 +134,7 @@
             </footer>
         </div>
 
-      </div>
+    </div>
 
 
 
@@ -136,67 +142,67 @@
 
 
 
-        <script id="user-template" type="text/x-hanglebars-template">
-            <div class="user-container">
-                <p class="user-full-name" data-id={{id}}>{{full-name}}</p>
-                <img class="user-image" src={{image}}>
-                <p class="user-dsecription">{{description}}</p>
-                <div class="social-bar">
-                    <div class="folllowing">{{following}} Following</div>
-                    <div class="followers">{{followers}} Followers</div>
-                    <div class="twitter"><a href="#">{{twitter-link}}</a></div>
-                    <div class="facebook"><a href="#">{{fb-link}}</a></div>
-                </div>
-                <button class="follow-button user">Follow</button>
+    <script id="user-template" type="text/x-hanglebars-template">
+        <div class="user-container">
+            <p class="user-full-name" data-id={{id}}>{{full-name}}</p>
+            <img class="user-image" src={{image}}>
+            <p class="user-dsecription">{{description}}</p>
+            <div class="social-bar">
+                <div class="folllowing">{{following}} Following</div>
+                <div class="followers">{{followers}} Followers</div>
+                <div class="twitter"><a href="#">{{twitter-link}}</a></div>
+                <div class="facebook"><a href="#">{{fb-link}}</a></div>
             </div>
-        </script>
-        <script id="post-template" type="text/x-handlebars-template">
-            <div class="post-container side-style">
-                <div class="post-author-info side-style">
-                    <!-- // inline style the background image with handlebars -->
-                    <div class="author-image-holder author-image-holder-side-style"><img src={{image}}></div>
-                    <p class="user-full-name post-author-name post-author-name-side-style" data-id={{id}}>{{fullName}}</p>
-                    <span class="post-date post-date-side-style">{{date}}</span>
-                    <span class="post-length post-length-side-style">{{postWordCount}}</span>
-                </div>
-                <div class="post-content post-content-side-style">
-                    <div class="post-image post-image-side-style"><img src={{image}}></div>
-                    <h1 class="post-title post-title-side-style">{{postTitle}}</h1>
-                    <p class="read-more read-more-side-style"><a href={{bodyLink}}>Read More...</a></p>
-                </div>
-                <div class="social-bar post social-bar-side-style">
-                    <img class="heart-favicon" src="http://bit.ly/2lr1FRv">
-                    <p>{{favorited}}</p>
-                    <p>{{responded}}</p>
-                    <img class="bookmark-favicon" src="http://bit.ly/2kx7LAE">
-                </div>
+            <button class="follow-button user">Follow</button>
+        </div>
+    </script>
+    <script id="post-template" type="text/x-handlebars-template">
+        <div class="post-container side-style">
+            <div class="post-author-info side-style">
+                <!-- // inline style the background image with handlebars -->
+                <div class="author-image-holder author-image-holder-side-style"><img src={{image}}></div>
+                <p class="user-full-name post-author-name post-author-name-side-style" data-id={{id}}>{{fullName}}</p>
+                <span class="post-date post-date-side-style">{{date}}</span>
+                <span class="post-length post-length-side-style">{{postWordCount}}</span>
             </div>
-        </script>
-        <script id="side-bar-template" type="text/x-handlebars-template">
-            <div class="post-container-side-style">
-                <div class="post-author-info-side-style">
-                    <!-- // inline style the background image with handlebars -->
-                    <div class="author-image-holder-side-style"></div>
-                </div>
-                <div class="post-content-side-style">
-                    <h1 class="post-title-side-style">{{postTitle}}</h1>
-                    <p class="post-author-name-side-style" data-id={{id}}>{{fullName}}</p>
-                    <span class="post-date-side-style">{{date}}</span>
-                </div>
+            <div class="post-content post-content-side-style">
+                <div class="post-image post-image-side-style"><img src={{image}}></div>
+                <h1 class="post-title post-title-side-style">{{postTitle}}</h1>
+                <p class="read-more read-more-side-style"><a href={{bodyLink}}>Read More...</a></p>
             </div>
-        </script>
-        <script id="user-template" type="text/x-handlebars-template">
-            <div class="post-container-side-style">
-                <div class="post-author-info-side-style">
-                    <!-- // inline style the background image with handlebars -->
-                    <div class="author-image-holder-side-style"><img src={{image}}></div>
-                    <p>{{fullName}}</p>
-                </div>
+            <div class="social-bar post social-bar-side-style">
+                <img class="heart-favicon" src="http://bit.ly/2lr1FRv">
+                <p>{{favorited}}</p>
+                <p>{{responded}}</p>
+                <img class="bookmark-favicon" src="http://bit.ly/2kx7LAE">
             </div>
-        </script>
-        <script src="src/js/vendor/jquery-3.1.1.min.js "></script>
-        <script src="src/js/vendor/handlebars-v4.0.5.js "></script>
-        <script src="src/js/main.js"></script>
+        </div>
+    </script>
+    <script id="side-bar-template" type="text/x-handlebars-template">
+        <div class="post-container-side-style">
+            <div class="post-author-info-side-style">
+                <!-- // inline style the background image with handlebars -->
+                <div class="author-image-holder-side-style"></div>
+            </div>
+            <div class="post-content-side-style">
+                <h1 class="post-title-side-style">{{postTitle}}</h1>
+                <p class="post-author-name-side-style" data-id={{id}}>{{fullName}}</p>
+                <span class="post-date-side-style">{{date}}</span>
+            </div>
+        </div>
+    </script>
+    <script id="user-template" type="text/x-handlebars-template">
+        <div class="post-container-side-style">
+            <div class="post-author-info-side-style">
+                <!-- // inline style the background image with handlebars -->
+                <div class="author-image-holder-side-style"><img src={{image}}></div>
+                <p>{{fullName}}</p>
+            </div>
+        </div>
+    </script>
+    <script src="src/js/vendor/jquery-3.1.1.min.js "></script>
+    <script src="src/js/vendor/handlebars-v4.0.5.js "></script>
+    <script src="src/js/main.js"></script>
 </body>
 
 </html>
