@@ -117,7 +117,7 @@
             closeSignUpDiv.addEventListener('click', function() {
                 event.preventDefault();
                 signInCont.classList.add('hide');
-            })
+            });
         }
 
         function createUser() {
@@ -135,7 +135,7 @@
                 console.log(userData);
                 sendUserData(userData);
                 getNewUsers();
-            })
+            });
         }
 
         function sendUserData(userData) {
