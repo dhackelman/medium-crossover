@@ -52,6 +52,7 @@
                 this.fullName = storyData.user.name;
                 this.image = storyData.user.image;
                 this.postTitle = storyData.title;
+                this.id = storyData.id;
                 this.build();
             }
 
@@ -61,7 +62,8 @@
                 const context = {
                     fullName: this.fullName,
                     postTitle: this.postTitle,
-                    image: this.image
+                    image: this.image,
+                    id: this.id
                 };
                 const html = template(context);
                 $('.user-stories-container').prepend(html);
@@ -125,8 +127,25 @@
         function sideBarContentShow() {
             $('.top-stories-content').on('click', '.post-container-side-style', function() {
                 event.preventDefault();
-                $('')
+                // console.log(event.target[0].getAttribute('data-id'));
+                let articleId = $(this).data('id');
+                console.log(articleId);
+                replaceMainContent(articleId);
+                $('.side-content-bar').toggleClass('hide');
+                $('.author-post-body').toggleClass('hide');
             });
+        }
+
+        function replaceMainContent(arg) {
+          let divLength = $('.stories-content-box').children().length;
+          console.log(divLength);
+          for (let i = 0; i < divLength; i++ ) {
+            $('.stories-content-box').children().each( function (){
+              if ($(this).data('id') != arg ) {
+                $(this).toggleClass('hide');
+              }
+            });
+          }
         }
 
         function clickCategories() {
