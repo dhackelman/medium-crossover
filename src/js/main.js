@@ -102,6 +102,7 @@
             authorPostBody();
             sideBarContentShow();
             usersTab();
+            deleteUserProfile();
         }
 
         function buildTemplateWithData() {
@@ -116,34 +117,48 @@
         }
 
         function buildTemplateWithRandom() {
-           $.get("https://medium-crossover.herokuapp.com/posts").then(
-               function(response) {
-                   response.sort(function(a, b) {
-                       return 0.5 - Math.random();
-                   });
-                   for (let i = 0; i < response.length; i++) {
-                       new IndividualStories(response[i]);
-                       populateSideStories(response[i]);
-                   }
-                   console.log(response);
-               });
-       }
+            $.get("https://medium-crossover.herokuapp.com/posts").then(
+                function(response) {
+                    response.sort(function(a, b) {
+                        return 0.5 - Math.random();
+                    });
+                    for (let i = 0; i < response.length; i++) {
+                        new IndividualStories(response[i]);
+                        populateSideStories(response[i]);
+                    }
+                    console.log(response);
+                });
+        }
 
-      //  function deleteUserRequest(arg) {
-      //   const settings = {
-      //       method: 'DELETE',
-      //       url: `https://medium-crossover.herokuapp.com/users/${arg}`,
-      //       headers: {
-      //           "content-type": "application/json;charset=utf-8"
-      //       }
-      //   };
-       //
-      //     $.ajax(settings).then((response) => {
-      //       console.log(response);
-      //     }).catch((error) => {
-      //       console.log(error);
-      //     });
-      //  }
+        function deleteUserProfile() {
+            $('.users-box').on('click', '.delete-button', function() {
+                event.preventDefault;
+                console.log($(this).data('id'));
+                // if ($(this).data('id') != arg) {
+                //     $(this).toggleClass('hide');
+                // }
+
+                // $('.user-in').remove();
+
+
+            });
+        }
+
+        // function deleteUserRequest(arg) {
+        //     const settings = {
+        //         method: 'DELETE',
+        //         url: `https://medium-crossover.herokuapp.com/users${arg}`,
+        //         headers: {
+        //             "content-type": "application/json;charset=utf-8"
+        //         }
+        //     };
+        //
+        //     $.ajax(settings).then((response) => {
+        //         console.log(response);
+        //     }).catch((error) => {
+        //         console.log(error);
+        //     });
+        // }
 
         function authorPostBody() {
             $(".stories-content-box").on('click', ".post-container", function() {
@@ -171,22 +186,22 @@
         }
 
         function replaceMainContent(arg) {
-          let divLength = $('.stories-content-box').children().length;
-          console.log(divLength);
-          for (let i = 0; i < divLength; i++ ) {
-            $('.stories-content-box').children().each( function (){
-              if ($(this).data('id') != arg ) {
-                $(this).toggleClass('hide');
-              }
-            });
-          }
+            let divLength = $('.stories-content-box').children().length;
+            console.log(divLength);
+            for (let i = 0; i < divLength; i++) {
+                $('.stories-content-box').children().each(function() {
+                    if ($(this).data('id') != arg) {
+                        $(this).toggleClass('hide');
+                    }
+                });
+            }
         }
 
         function clickCategories() {
-           categoriesButtons.on('click', 'li', function() {
-               buildTemplateWithRandom();
-           });
-       }
+            categoriesButtons.on('click', 'li', function() {
+                buildTemplateWithRandom();
+            });
+        }
 
         function closeSignUp() {
             closeSignUpDiv.addEventListener('click', function() {
@@ -242,16 +257,16 @@
         }
 
         function usersTab() {
-           $('.users-tab').on('click', 'li', function() {
-               event.preventDefault();
-               getNewUsers();
-               $('.users-box').toggleClass('hide');
-               $('.stories-content-box').toggleClass('hide');
-               $('.side-content-bar').toggleClass('hide');
+            $('.users-tab').on('click', 'li', function() {
+                event.preventDefault();
+                getNewUsers();
+                $('.users-box').toggleClass('hide');
+                $('.stories-content-box').toggleClass('hide');
+                $('.side-content-bar').toggleClass('hide');
 
-               console.log('in');
-           });
-       }
+                console.log('in');
+            });
+        }
 
 
         function populateSideStories(arg) {
@@ -271,9 +286,9 @@
             });
         }
 
-        function deleteUsers() {
-          $('.users-box').empty();
-        }
+        // function deleteUsers() {
+        //     $('.users-box').empty();
+        // }
 
         function init() {
             bindEvents();

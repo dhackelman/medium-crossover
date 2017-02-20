@@ -51,7 +51,7 @@
                 <li><a href="#">Technology</a></li>
             </ul>
             <ul class="users-tab">
-              <li> <a href="#">Users</a></li>
+                <li> <a href="#">Users</a></li>
             </ul>
         </nav>
     </header>
@@ -182,18 +182,21 @@
         </div>
     </script>
     <script id="user-template" type="text/x-handlebars-template">
+        <div class="user-info-all">
             <div class="user-info">
                 <div class="user-image-holder" style="background:url({{image}}); no-repeat; background-size: 100%;"></div>
                 <p class="user-full-name">{{fullName}}</p>
                 <p class="user-description">{{description}}</p>
             </div>
             <div class="user-stats">
-              <p class="following">{{randNum1}}</p>
-              <p class="followers">{{randNum2}}</p>
-              <p class="twitter">Twit Link</p>
-              <p class="facebook">FB link</p>
-              <button class="follow-button">Follow</button>
+                <p class="following">{{randNum1}}</p>
+                <p class="followers">{{randNum2}}</p>
+                <p class="twitter">Twit Link</p>
+                <p class="facebook">FB link</p>
+                <button class="follow-button">Follow</button>
+                <button class="delete-button" data-id={{id}}>Delete</button>
             </div>
+        </div>
     </script>
     <script src="src/js/vendor/jquery-3.1.1.min.js "></script>
     <script src="src/js/vendor/handlebars-v4.0.5.js "></script>
