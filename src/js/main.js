@@ -69,9 +69,9 @@
                 $('.user-stories-container').prepend(html);
                 // $('.authors-picks').prepend(html);
             }
-          }
+        }
 
-            class SideStoriesAuthorPicks{
+        class SideStoriesAuthorPicks {
             constructor(storyData) {
                 this.fullName = storyData.user.name;
                 this.image = storyData.user.image;
@@ -120,17 +120,17 @@
         }
 
         function bindEvents() {
-          buildTemplateWithData();
-          writeStoryButton();
-          signInSignUp();
-          clickCategories();
-          closeSignUp();
-          createUser();
-          authorPostBody();
-          // sideBarContentShowEachTopStory();
-          // sideBarContentShowAuthorsPick();
-          usersTab();
-          // deleteThisUser();
+            buildTemplateWithData();
+            writeStoryButton();
+            signInSignUp();
+            clickCategories();
+            closeSignUp();
+            createUser();
+            authorPostBody();
+            // sideBarContentShowEachTopStory();
+            // sideBarContentShowAuthorsPick();
+            usersTab();
+            deleteUserProfile();
         }
 
         function buildTemplateWithData() {
@@ -160,31 +160,27 @@
         function deleteUserProfile() {
             $('.users-box').on('click', '.delete-button', function() {
                 event.preventDefault;
-                console.log($(this).data('id'));
-                // if ($(this).data('id') != arg) {
-                //     $(this).toggleClass('hide');
-                // }
-
-                // $('.user-in').remove();
-
+                let furry = $(this).data('id');
+                deleteUserRequest(furry);
             });
         }
 
-        // function deleteUserRequest(arg) {
-        //     const settings = {
-        //         method: 'DELETE',
-        //         url: `https://medium-crossover.herokuapp.com/users${arg}`,
-        //         headers: {
-        //             "content-type": "application/json;charset=utf-8"
-        //         }
-        //     };
-        //
-        //     $.ajax(settings).then((response) => {
-        //         console.log(response);
-        //     }).catch((error) => {
-        //         console.log(error);
-        //     });
-        // }
+        function deleteUserRequest(arg) {
+            const settings = {
+                method: 'DELETE',
+                url: `https://medium-crossover.herokuapp.com/users/${arg}`,
+                dataType: 'json',
+                headers: {
+                    "content-type": "application/json;charset=utf-8"
+                }
+            };
+
+            $.ajax(settings).then((response) => {
+                getNewUsers();
+            }).catch((error) => {
+                console.log(error);
+            });
+        }
 
         function authorPostBody() {
             $(".stories-content-box").on('click', ".post-container", function() {
@@ -296,10 +292,10 @@
         }
 
 
-       function placeMainContent() {
-         let contentPlacement = ($('.header').position().top + $('.header').height());
-         $('.main-content-body').css('margin-top',contentPlacement);
-       }
+        function placeMainContent() {
+            let contentPlacement = ($('.header').position().top + $('.header').height());
+            $('.main-content-body').css('margin-top', contentPlacement);
+        }
 
 
         function populateSideStories(arg) {
@@ -324,8 +320,8 @@
         // }
 
         function init() {
-          placeMainContent();
-          bindEvents();
+            placeMainContent();
+            bindEvents();
             // deleteUsers();
         }
 
