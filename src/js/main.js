@@ -100,6 +100,7 @@
                 this.fullName = apple.name;
                 this.id = apple.id;
                 this.image = apple.image;
+                this.description = apple.description;
                 this.build();
             }
 
@@ -109,6 +110,7 @@
                 const context = {
                     fullName: this.fullName,
                     image: this.image,
+                    description: this.description,
                     id: this.id
                 };
                 const html = template(context);

@@ -5,58 +5,69 @@
   .user-info {
     background-color: white;
     border-bottom: 2px solid gray;
-    display: flex;
-    justify-content: center;
+    // display: flex;
+    // justify-content: center;
     margin: 5% auto;
     padding: 5% 5%;
     width: 90%;
-
-    .user-full-name{
-      display: inline-block;
-      font-size: 1.75rem;
-      font-weight: 700;
-      margin: 0;
-      text-transform: capitalize;
-    }
-
   }
+}
+
+
 
   .user-image-holder {
-    float: left;
+    float: right;
     height: 120px;
     margin: 2%;
     width: 120px;
     border-radius: 50%;
   }
-}
-
-.following, .followers {
-  display: inline-block;
-  margin: 1% 1% 1% 2%;
-  color: gray;
-}
 
 
-.twitter {
-  display: inline-block;
-  margin: 1% 1% 1% 10%;
-}
+  .user-full-name{
+    display: inline-block;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 2%;
+    text-transform: capitalize;
+  }
 
-.twitter img {
-  max-height: 20px;
-}
+.user-stats{
+  display: block;
+  width: 100%;
 
-.facebook {
-  display: inline-block;
-  margin: 1% 1% 1% 1%;
-}
+  .following, .followers {
+    display: inline-block;
+    font-size: 2rem;
+    margin: 1% 1% 1% 2%;
+    color: gray;
+  }
 
-.follow-button {
-  background-color: white;
-  color: #00AB6C;
-  border: 2px solid #00AB6C;
-  font-size: .8rem;
-  padding: 2% 4%;
-  border-radius: 500px;
-  margin: 2% 0 0;
+
+  .description {
+    display: block;
+    font-size: .8rem;
+    margin: 1% 1% ;
+    width: 60%;
+  }
+
+  .twitter img {
+    max-height: 20px;
+  }
+
+  .follow-button, .delete-button {
+    background-color: white;
+    color: #00AB6C;
+    border: 2px solid #00AB6C;
+    font-size: .8rem;
+    padding: 2% 4%;
+    border-radius: 500px;
+    margin: 2% 0 0;
+  }
+
+  .delete-button {
+    color: red;
+    border: 2px solid red;
+  }
+
 }
