@@ -49,15 +49,21 @@
     }
 }
 
-.categories-menu {
+.categories {
+  overflow: hidden;
+  padding-left: 10%;
+}
+
+.categories-menu, .users-tab {
     align-items: center;
     display: flex;
     flex-direction: row;
+    float: left;
     font-size: .8rem;
     justify-content: flex-start;
-    list-style: none;
-    padding: 1% 10%;
-    width: 100%;
+    list-style-type: none;
+    padding: 1% 0;
+    width: 48%;
 
     a {
         color: #7f7f7f;

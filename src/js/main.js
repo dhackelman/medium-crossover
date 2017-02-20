@@ -47,7 +47,7 @@
 
         }
 
-        class SideStories {
+        class SideStoriesTopStories {
             constructor(storyData) {
                 this.fullName = storyData.user.name;
                 this.image = storyData.user.image;
@@ -67,6 +67,29 @@
                 };
                 const html = template(context);
                 $('.user-stories-container').prepend(html);
+                // $('.authors-picks').prepend(html);
+            }
+          }
+
+            class SideStoriesAuthorPicks{
+            constructor(storyData) {
+                this.fullName = storyData.user.name;
+                this.image = storyData.user.image;
+                this.postTitle = storyData.title;
+                this.id = storyData.id;
+                this.build();
+            }
+
+            build() {
+                const source = $('#side-bar-template').html();
+                const template = Handlebars.compile(source);
+                const context = {
+                    fullName: this.fullName,
+                    postTitle: this.postTitle,
+                    image: this.image,
+                    id: this.id
+                };
+                const html = template(context);
                 $('.authors-picks').prepend(html);
             }
 
@@ -75,6 +98,7 @@
         class UserMaker {
             constructor(apple) {
                 this.fullName = apple.name;
+                this.id = apple.id;
                 this.image = apple.image;
                 this.build();
             }
@@ -84,7 +108,8 @@
                 const template = Handlebars.compile(source);
                 const context = {
                     fullName: this.fullName,
-                    image: this.image
+                    image: this.image,
+                    id: this.id
                 };
                 const html = template(context);
                 $('.users-box').prepend(html);
@@ -93,24 +118,24 @@
         }
 
         function bindEvents() {
-            buildTemplateWithData();
-            writeStoryButton();
-            signInSignUp();
-            clickCategories();
-            closeSignUp();
-            createUser();
-            authorPostBody();
-            sideBarContentShow();
-            usersTab();
-            deleteUserProfile();
+          buildTemplateWithData();
+          writeStoryButton();
+          signInSignUp();
+          clickCategories();
+          closeSignUp();
+          createUser();
+          authorPostBody();
+          // sideBarContentShowEachTopStory();
+          // sideBarContentShowAuthorsPick();
+          usersTab();
+          // deleteThisUser();
         }
 
         function buildTemplateWithData() {
             $.get("https://medium-crossover.herokuapp.com/posts").then(
                 function(response) {
-                    for (let i = 0; i < response.length; i++) {
+                    for (let i = 0; i < 10; i++) {
                         new IndividualStories(response[i]);
-                        populateSideStories(response[i]);
                     }
                     console.log(response);
                 });
@@ -122,9 +147,9 @@
                     response.sort(function(a, b) {
                         return 0.5 - Math.random();
                     });
-                    for (let i = 0; i < response.length; i++) {
+                    for (let i = 0; i < 7; i++) {
                         new IndividualStories(response[i]);
-                        populateSideStories(response[i]);
+                        // populateSideStories(response[i]);
                     }
                     console.log(response);
                 });
@@ -139,7 +164,6 @@
                 // }
 
                 // $('.user-in').remove();
-
 
             });
         }
@@ -218,6 +242,7 @@
                     userData.name = event.target[0].value;
                     userData.description = event.target[1].value;
                     userData.image = event.target[2].value;
+                    userData.image = event.target[3].value;
                 }
                 console.log(userData);
                 sendUserData(userData);
@@ -269,6 +294,12 @@
         }
 
 
+       function placeMainContent() {
+         let contentPlacement = ($('.header').position().top + $('.header').height());
+         $('.main-content-body').css('margin-top',contentPlacement);
+       }
+
+
         function populateSideStories(arg) {
             new SideStories(arg);
         }
@@ -291,15 +322,16 @@
         // }
 
         function init() {
-            bindEvents();
-            deleteUsers();
+          placeMainContent();
+          bindEvents();
+            // deleteUsers();
         }
 
         return {
             init: init
-        };
+        }
 
-    };
+    }
 
     const THING = APP();
     THING.init();

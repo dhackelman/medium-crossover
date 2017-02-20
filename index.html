@@ -76,9 +76,6 @@
                     <div class="user-top-stories-container">
                         <!-- Individual user stories to be plugged in -->
                         <div class="user-stories-container">
-                            <img src "">
-                            <p> DUUUUUUUUUDE
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -92,8 +89,6 @@
                     <div class="author-picks-stories-container">
                         <!-- Individual author picks to be plugged in -->
                         <div class="authors-picks">
-                            <img src "">
-                            <p>BROOOOOOOO</p>
                         </div>
                     </div>
                 </div>
@@ -108,8 +103,6 @@
                     <div class="tag-stories-container">
                         <!-- Individual stories with category -->
                         <div class="tag-stories">
-                            <img src "">
-                            <p>SUUUUUUUUUUUUH</p>
                         </div>
                     </div>
                 </div>
@@ -182,9 +175,9 @@
         </div>
     </script>
     <script id="user-template" type="text/x-handlebars-template">
-        <div class="user-info-all">
+        <div class="user-info-all" data-id={{id}}>
             <div class="user-info">
-                <div class="user-image-holder" style="background:url({{image}}); no-repeat; background-size: 100%;"></div>
+                <div class="user-image-holder" style="background:url({{image}}) center no-repeat; background-size: 100%;"></div>
                 <p class="user-full-name">{{fullName}}</p>
                 <p class="user-description">{{description}}</p>
             </div>

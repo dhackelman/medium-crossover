@@ -269,7 +269,7 @@ form .create-user {
   background-color: white;
   border: 25px solid #fafafa;
   line-height: 1;
-  padding: 1% 5% 0;
+  padding: 5% 10% 0;
   position: absolute;
   width: 100vw;
   min-height: 350px; }
@@ -280,7 +280,7 @@ form .create-user {
       margin: 0 auto;
       width: 90%; }
       .expand .post-content .post-image img {
-        width: 100%; }
+        width: 80%; }
   .expand .author-post-body {
     font-size: 1rem;
     line-height: 1.5;
@@ -370,16 +370,21 @@ form .create-user {
     font-size: .9rem;
     font-weight: 300; }
 
-.categories-menu {
+.categories {
+  overflow: hidden;
+  padding-left: 10%; }
+
+.categories-menu, .users-tab {
   align-items: center;
   display: flex;
   flex-direction: row;
+  float: left;
   font-size: .8rem;
   justify-content: flex-start;
-  list-style: none;
-  padding: 1% 10%;
-  width: 100%; }
-  .categories-menu a {
+  list-style-type: none;
+  padding: 1% 0;
+  width: 48%; }
+  .categories-menu a, .users-tab a {
     color: #7f7f7f;
     margin: 15px;
     text-decoration: none; }
